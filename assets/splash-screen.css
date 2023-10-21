@@ -1,0 +1,136 @@
+body{
+    overflow: hidden;
+}
+
+.Splash-screen{
+    height: 100vh; 
+    max-width: 100%; 
+    background-color: #000;
+    z-index: 1500000;
+}
+
+.Splash-screen-container{
+    height: 100%;
+}
+
+.Splash-screen-img{
+    height: 50vh; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.Splash-screen-img>img{
+    height: 100%;
+    opacity: 1;
+    animation: fadeIn 2s ease-in-out infinite;
+    filter: drop-shadow(0 0 10px rgba(255, 255, 255, 1));
+    object-fit: cover;
+}
+
+@keyframes fadeIn {
+    0%, 100% {
+      opacity: 0.1;
+      filter: drop-shadow(0 0 6px rgba(255, 255, 255, 0));
+    }
+
+    50% {
+      opacity: 1;
+      filter: drop-shadow(0 0 5px rgba(255, 255, 255, 1));
+    }
+}
+
+.Splash-screen-arrow{
+    height: 20vh;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.fa-angle-double-up{
+    color: white;
+    font-size: 50px;
+    cursor: pointer;
+    animation: glowing 2s infinite;
+}
+
+@keyframes glowing {
+    0% {
+      opacity: 0.5;
+      text-shadow: 0 0px 5px rgba(255, 255, 255, 1);
+      transform: translateY(0);
+    }
+    50% {
+      opacity: 1;
+      text-shadow: 0 0px 10px rgba(255, 255, 255, 0.8);
+      transform: translateY(-5px);
+    }
+    100% {
+      opacity: 0.5;
+      text-shadow: 0 0px 5px rgba(255, 255, 255, 1);
+      transform: translateY(0);
+    }
+}
+
+.Splash-screen-text{
+    height: 30vh;
+}
+
+.Splash-screen-text>h2{
+    color: white;
+    font-size: 40px;
+    font-family: Verdana, Tahoma, sans-serif;
+    font-weight: 600;
+    animation: slideInLeft 1s forwards;
+    cursor: context-menu;
+    white-space: nowrap;
+    overflow: hidden;
+    padding: 10px;
+}
+
+@keyframes slideInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+#Splash-screen_animation{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 1;
+    z-index: 9999;
+    overflow: hidden;
+}
+
+
+/* Responsive styles for different screen sizes */
+@media screen and (max-width: 767px) {
+    .Splash-screen-img{
+        height: 90%;
+    }
+
+    .Splash-screen-text > h1 {
+        font-size: 30px;
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 991px) {
+    .Splash-screen-text > h1 {
+        font-size: 35px;
+    }
+}
+
+@media screen and (min-width: 992px) {
+    .Splash-screen-text > h1 {
+        font-size: 40px;
+    }
+}
+

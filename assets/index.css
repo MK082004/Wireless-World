@@ -1,0 +1,299 @@
+.main-container-by-mb-vd{
+    width: 50%;
+}
+  
+.grid-container{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(1, 1fr);
+    grid-gap: 10px;
+}
+
+.grid-item:nth-child(1){
+    grid-column: 1;
+    grid-row: 1;
+}
+  
+.grid-item:nth-child(2){
+    grid-column: 2;
+    grid-row: 1;
+}
+/*   
+.grid-item:nth-child(3){
+    grid-column: 2;
+    grid-row: 2;
+}
+ */
+
+@media (max-width: 768px){
+
+    .grid-container {
+      display: block;
+    }
+    
+    .grid-item {
+      width: 100%;
+      height: 180px;
+      margin-top: 10px;
+    }
+}
+
+.card{
+    width: 230px;
+}
+
+.product-card{
+    width: 230px;
+    border: 1px solid #ccc;
+    background: #fff;
+    height: 450px;
+    overflow: hidden;
+    margin: auto;
+}
+
+.product-card-upper-section{
+    position: relative;
+    height: 320px;
+    overflow: hidden;
+    width: 100%;
+}
+
+.product-card-upper-innerwrapper{
+    height: 100%;
+    width: 100%;
+}
+
+.product-card-upper-images{
+    height: 100%;
+    width: 100%;
+}
+
+.p-card-img-front,.p-card-img-back{
+    height: 100%;
+    width: 100% !important;
+    transition: 0.2s all ease-in-out;
+}
+
+.p-card-img-back{
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    opacity: 0;
+}
+
+.product-card-upper-section:hover .p-card-img-back{
+    opacity: 1;
+}
+
+.product-card-upper-discounted-tag{
+    position: absolute;
+    top: 5px;
+    left: 0;
+    background-color: rgb(0, 0, 14);
+    padding: 3px 10px;
+    border-top-right-radius: 2px;
+    border-bottom-right-radius: 2px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.product-card-upper-discounted-tag span{
+    color: white;
+    font-size: 10px;
+}
+
+.discount-hover-text {
+    position: absolute;
+    top: 5px;
+    left: 20%;
+    background-color: rgba(0, 0, 0, 0.510);
+    color: white;
+    font-size: 12px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    padding: 1px 3px;
+    border-radius: 2px;
+}
+
+.discount-hover-text::after {
+    right: auto;
+    margin-left: -7px;
+}
+
+.discount-hover-text::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 0px;
+    transform: translateY(-50%);
+    border-top: 5px solid transparent;
+    border-bottom: 5px solid transparent;
+    border-right: 7px solid rgba(0, 0, 0, 0.510);
+}
+
+.checked{
+    color: yellow;
+}
+
+.product-card-upper-whishicon{
+    position: absolute;
+    top: -13%;
+    right: 0;
+    background-color: rgba(0,0,14);
+    padding: 8px;
+    border-radius: 2px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: 0.3s all ease-in-out;
+}
+
+.product-card-upper-whishicon span{
+    color: white;
+    font-size: 20px;
+}
+
+.product-card:hover .product-card-upper-whishicon{
+    top: 0;
+}
+
+.whishlist-hover-text {
+    position: absolute;
+    top: 5px;
+    right: 21%;
+    background-color: rgba(0, 0, 0, 0.510);
+    color: white;
+    font-size: 12px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    padding: 1px 3px;
+    border-radius: 2px;
+}
+
+.whishlist-hover-text::after {
+    right: auto;
+    margin-left: -7px;
+}
+
+.whishlist-hover-text::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    right: -7px;
+    transform: translateY(-50%);
+    border-bottom: 5px solid transparent;
+    border-top: 5px solid transparent;
+    border-left: 7px solid rgba(0, 0, 0, 0.510);
+}
+
+.product-card-upper-varientBox{
+    position: absolute;
+    bottom: -25px;
+    transition: 0.3s all ease-in-out;
+}
+
+.product-card-upper-varientBox select{
+    width: 100%;
+    padding: 2px 0;
+    text-align: center;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    outline: none;
+    border: 1px solid rgba(0,0,14);
+    background-color: rgba(0,0,14);
+    color: white;
+    font-size: 12px;
+    letter-spacing: 2px;
+    cursor: pointer;
+}
+
+#Product_One_Name option{
+    background-color: lightgray;
+    color: rgba(0,0,14);
+}
+
+.product-card-upper-varientBox:hover select{
+    background-color: rgb(255, 255, 255);
+    color: rgba(0,0,14);
+    font-weight: bold;
+}
+
+.product-card:hover .product-card-upper-varientBox{
+    bottom: 0;
+}
+
+.product-card-bottom-section{
+    position: relative;
+    overflow: hidden;
+}
+
+.p-card-details a p{
+    text-align: center;
+    font-size: 14px;
+    color: rgba(0,0,14);
+    font-weight: 600;
+}
+
+.p-card-price{
+    text-align: center;
+    font-size: 14px;
+    font-weight: bold;
+    color: rgba(0,0,14);
+}
+
+.p-card-price del{
+    color: grey;
+    font-weight: 200;
+}
+
+.p-card-rating{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 15px;
+    gap: 5px;
+    margin-top: 5px;
+}
+
+.p-card-shoppingcart{
+    position: absolute;
+    bottom: -31%;
+    padding: 5px 0;
+    background-color: rgba(0,0,14);
+    color: white;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.1s all ease-in-out;
+    z-index: 5;
+}
+
+.product-card:hover .p-card-shoppingcart{
+    bottom: 0;
+}
+
+.p-card-shoppingcart:hover{
+    background-color: transparent;
+    color: rgb(0, 0, 14);
+    border: 1px solid rgb(0, 0, 14);
+    font-weight: 900;
+}
+
+.p-card-shoppingcart:hover .fa-shopping-cart{
+    color: rgb(0, 0, 14);
+    font-weight: 900;
+}
+
+.product-card:hover{
+    box-shadow: 4px 5px 5px rgba(255, 255, 255, 0.37);
+    /* background-color: rgb(226, 226, 226); */
+}
